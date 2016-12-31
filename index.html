@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>first example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery.min.js"></script>
+    <script src="./avalon-2.2.3.js"></script>
+    <script src="./index.js"></script>
+    <script src="./template.js"></script>
+</head>
+<body ms-controller="test">
+<!--异步模板-->
+    <template ms-widget="{is:'ms-pager',data:@data,array:@array,removeItem:@removeItem}"></template>
+<div>外层data属性值:{{@data.name}}</div>
+<div>外层vm数组长度:{{@array.length}}</div>
+</body>
+</html>
