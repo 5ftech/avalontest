@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./jquery.min.js"></script>
-    <script src="./avalon-2.2.3.js"></script>
+    <script src="./avalon-2.2.4.js"></script>
     <script src="./index.js"></script>
     <script src="./template.js"></script>
 </head>
 <body ms-controller="test">
-<!--异步模板-->
-    <template ms-widget="{is:'ms-pager',data:@data,array:@array,removeItem:@removeItem}"></template>
+<!--容器vm显示-->
 <div>外层data属性值:{{@data.name}}</div>
 <div>外层vm数组长度:{{@array.length}}</div>
+<!--组件vm显示-->
+<div style="margin-top: 20px">
+    <template ms-widget="{is:'ms-pager',data:@data,array:@array,removeItem:@removeItem}"></template>
+</div>
+<!--模板vm显示-->
+<div style="margin-top: 20px">
+    <div ms-html="@widgetTemplate"></div>
+</div>
 </body>
 </html>

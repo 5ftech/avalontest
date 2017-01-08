@@ -1,10 +1,10 @@
-<div >
+<div>
     <input type="text" ms-duplex="@data.name"/>
     <div>
         <ul>
             <li ms-for="($index,el) in @array" :click="@removeItem($index)">{{$index}}--{{el}}</li>
         </ul>
     </div>
-    <div>组件内data属性值{{@data.name}}</div>
-    <div>组件内的vm数组长度:{{@array.length}}</div>
+    <div>模板内data属性值{{@data.name}}</div>
+    <div>模板内的vm数组长度:{{@array.length}}</div>
 </div>
